@@ -1,36 +1,43 @@
 @import 'tailwindcss';
-@import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@theme {
+  --color-background: oklch(0.9842 0.0034 247.8575);
+  --color-foreground: oklch(0.2795 0.0368 260.031);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.2795 0.0368 260.031);
+  --color-primary: oklch(0.5854 0.2041 277.1173);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.9276 0.0058 264.5313);
+  --color-muted: oklch(0.967 0.0029 264.5419);
+  --color-muted-foreground: oklch(0.551 0.0234 264.3637);
+  --color-border: oklch(0.8717 0.0093 258.3382);
+  --color-destructive: oklch(0.6368 0.2078 25.3313);
+  --color-chart-1: oklch(0.5854 0.2041 277.1173);
+  --color-chart-2: oklch(0.5106 0.2301 276.9656);
+  --color-chart-3: oklch(0.4568 0.2146 277.0229);
+  --color-chart-4: oklch(0.3984 0.1773 277.3662);
+  --color-chart-5: oklch(0.3588 0.1354 278.6973);
+  --radius: 0.5rem;
+  --spacing: 0.25rem;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@layer base {
+  .dark {
+    --color-background: oklch(0.2077 0.0398 265.7549);
+    --color-foreground: oklch(0.9288 0.0126 255.5078);
+    --color-card: oklch(0.2795 0.0368 260.031);
+    --color-card-foreground: oklch(0.9288 0.0126 255.5078);
+    --color-primary: oklch(0.6801 0.1583 276.9349);
+    --color-primary-foreground: oklch(0.2077 0.0398 265.7549);
+    --color-secondary: oklch(0.3351 0.0331 260.912);
+    --color-muted: oklch(0.2795 0.0368 260.031);
+    --color-muted-foreground: oklch(0.7137 0.0192 261.3246);
+    --color-border: oklch(0.4461 0.0263 256.8018);
+    --color-destructive: oklch(0.6368 0.2078 25.3313);
+    --color-chart-1: oklch(0.6801 0.1583 276.9349);
+    --color-chart-2: oklch(0.5854 0.2041 277.1173);
+    --color-chart-3: oklch(0.5106 0.2301 276.9656);
+    --color-chart-4: oklch(0.4568 0.2146 277.0229);
+    --color-chart-5: oklch(0.3984 0.1773 277.3662);
   }
 }
