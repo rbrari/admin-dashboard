@@ -35,10 +35,16 @@
     "prettier-plugin-organize-imports": "^4.1.0",
     "typescript": "~5.8.0",
     "vite": "^7.0.0",
+    "vite-plugin-inspect": "^11.3.0",
     "vite-plugin-vue-devtools": "^7.7.7",
     "vue-tsc": "^2.2.10"
   },
   "packageManager": "pnpm@9.11.0+sha1.4cd20e68438613738e8f2bc9aece61eaa6b3e649",
+  "pnpm": {
+    "overrides": {
+      "vite-plugin-inspect": "^11.3.0"
+    }
+  },
   "msw": {
     "workerDirectory": [
       "public"
