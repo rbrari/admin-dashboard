@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-    <template v-if="isLoading">
+    <template v-if="isLoading && !monthOptions.length">
       <Skeleton width="140px" height="40px" className="rounded-lg" />
       <Skeleton width="175px" height="40px" className="rounded-lg" />
     </template>
@@ -11,7 +11,8 @@
   </div>
 
   <div class="space-y-4 rounded-xl border border-border bg-card p-4 shadow-sm md:p-6 lg:p-8">
-    <div class="text-xl font-bold text-card-foreground md:text-2xl">
+    <Skeleton v-if="isLoading" height="32px" width="150px" className="rounded-lg" />
+    <div v-else class="text-xl font-bold text-card-foreground md:text-2xl">
       {{ uniqueUsersHeadline }}
     </div>
     <template v-if="isRelativeTimeframe">
