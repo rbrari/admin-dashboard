@@ -1,43 +1,83 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-background: oklch(0.9842 0.0034 247.8575);
-  --color-foreground: oklch(0.2795 0.0368 260.031);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.2795 0.0368 260.031);
-  --color-primary: oklch(0.5854 0.2041 277.1173);
-  --color-primary-foreground: oklch(1 0 0);
-  --color-secondary: oklch(0.9276 0.0058 264.5313);
-  --color-muted: oklch(0.967 0.0029 264.5419);
-  --color-muted-foreground: oklch(0.551 0.0234 264.3637);
-  --color-border: oklch(0.8717 0.0093 258.3382);
-  --color-destructive: oklch(0.6368 0.2078 25.3313);
-  --color-chart-1: oklch(0.5854 0.2041 277.1173);
-  --color-chart-2: oklch(0.5106 0.2301 276.9656);
-  --color-chart-3: oklch(0.4568 0.2146 277.0229);
-  --color-chart-4: oklch(0.3984 0.1773 277.3662);
-  --color-chart-5: oklch(0.3588 0.1354 278.6973);
-  --radius: 0.5rem;
-  --spacing: 0.25rem;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
 }
 
-@layer base {
-  .dark {
-    --color-background: oklch(0.2077 0.0398 265.7549);
-    --color-foreground: oklch(0.9288 0.0126 255.5078);
-    --color-card: oklch(0.2795 0.0368 260.031);
-    --color-card-foreground: oklch(0.9288 0.0126 255.5078);
-    --color-primary: oklch(0.6801 0.1583 276.9349);
-    --color-primary-foreground: oklch(0.2077 0.0398 265.7549);
-    --color-secondary: oklch(0.3351 0.0331 260.912);
-    --color-muted: oklch(0.2795 0.0368 260.031);
-    --color-muted-foreground: oklch(0.7137 0.0192 261.3246);
-    --color-border: oklch(0.4461 0.0263 256.8018);
-    --color-destructive: oklch(0.6368 0.2078 25.3313);
-    --color-chart-1: oklch(0.6801 0.1583 276.9349);
-    --color-chart-2: oklch(0.5854 0.2041 277.1173);
-    --color-chart-3: oklch(0.5106 0.2301 276.9656);
-    --color-chart-4: oklch(0.4568 0.2146 277.0229);
-    --color-chart-5: oklch(0.3984 0.1773 277.3662);
-  }
+:root {
+  --background: oklch(0.962 0.018 272.314);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.511 0.262 276.966);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.93 0.034 272.788);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.971 0.013 17.38);
+  --border: oklch(0.922 0 0);
+  --input: oklch(1 0 0);
+  --chart-1: #4f39f6;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --success: oklch(0.723 0.219 149.579);
+  --warning: oklch(0.828 0.189 84.429);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.275 0 0);
+  --input: oklch(0.325 0 0);
+  --chart-1: #3939f6;
+  --chart-2: #34d399;
+  --chart-3: #fbbf24;
+  --chart-4: #f87171;
+}
+
+body {
+  @apply bg-background;
+}
+
+*:focus,
+*:focus-visible {
+  @apply outline-none;
 }
