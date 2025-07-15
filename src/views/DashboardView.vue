@@ -16,7 +16,10 @@
       {{ uniqueUsersHeadline }}
     </div>
     <template v-if="isRelativeTimeframe">
-      <div class="text-sm text-muted-foreground md:text-base">Track user engagement over time</div>
+      <Skeleton v-if="isLoading" height="24px" width="300px" className="rounded-lg" />
+      <div v-else class="text-sm text-muted-foreground md:text-base">
+        Track user engagement over time
+      </div>
       <div class="h-64 w-full md:h-80">
         <Skeleton v-if="isLoading" height="100%" className="rounded-lg" />
         <LineChart
